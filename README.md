@@ -55,6 +55,7 @@ $skills-sync Install only skills-sync.
 $skills-sync Use existing repo at ~/projects/skills.
 $shadcn-mcp Set up the shadcn MCP server.
 $git-commit Commit and push.
+$skills-improve Improve a skill from my last task.
 ```
 
 > [!TIP]
@@ -67,3 +68,4 @@ $git-commit Commit and push.
 | `skills-sync` | Bootstrap or maintain a skills repo with autosync hooks for `~/.codex/skills`. |
 | `shadcn-mcp` | Install and configure the shadcn MCP server for Codex CLI. |
 | `git-commit` | Standardize commit messages and guide clean-history amendments when requested. |
+| `skills-improve` | Capture and apply continuous improvements to Codex CLI skills. |
