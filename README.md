@@ -42,3 +42,4 @@ Follow the prompts to choose one:
 | Skill | Description |
 | --- | --- |
 | `skills-sync` | Bootstrap or maintain a skills repo with autosync hooks for `~/.codex/skills`. |
+| `shadcn-mcp` | Install and configure the shadcn MCP server for Codex. |
