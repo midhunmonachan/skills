@@ -1,6 +1,22 @@
-# Skills Repo
+<h1 align="center">Codex CLI Skills</h1>
 
-Shared Codex skills repo with autosync hooks.
+<p align="center">Codex CLI skills with autosync hooks and maintained skill catalog.</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/last-commit/midhunmonachan/skills" alt="Last commit" />
+  <img src="https://img.shields.io/github/repo-size/midhunmonachan/skills" alt="Repo size" />
+  <img src="https://img.shields.io/github/languages/top/midhunmonachan/skills" alt="Top language" />
+  <img src="https://img.shields.io/github/issues/midhunmonachan/skills" alt="Issues" />
+</p>
+
+<p align="center">
+  <a href="#requirements">Requirements</a> •
+  <a href="#quick-start-codex-cli-only">Quick start</a> •
+  <a href="#example-prompts">Example prompts</a> •
+  <a href="#available-skills">Available skills</a>
+</p>
+
+---
 
 ## Requirements
 
@@ -8,23 +24,23 @@ Shared Codex skills repo with autosync hooks.
 > Tested on Ubuntu 24.04; may work on other modern Linux distros.
 > Requires the Codex CLI, bash 4+, and git.
 
-## Quick start (Codex only)
+## Quick start (Codex CLI only)
 
-### Install the bootstrap skill (from inside Codex)
+1. Install the bootstrap skill (from inside Codex CLI):
 
-```
-$skill-installer --repo midhunmonachan/skills --path skills/skills-sync
-```
+   ```bash
+   $skill-installer --repo midhunmonachan/skills --path skills/skills-sync
+   ```
 
-Restart Codex after installing the skill.
+2. Restart Codex CLI after installing the skill.
 
-### Run the skill
+3. Run the skill:
 
-```
-$skills-sync
-```
+   ```bash
+   $skills-sync
+   ```
 
-Follow the prompts to choose one:
+4. Follow the prompts to choose one:
 
 - Full clone of this repo (default URL: `https://github.com/midhunmonachan/skills.git`)
 - Selective skills install (no clone)
@@ -33,13 +49,21 @@ Follow the prompts to choose one:
 
 ## Example prompts
 
-- "Clone the full repo into `~/projects/skills`."
-- "Install only `skills-sync` from `midhunmonachan/skills`."
-- "Create a new empty skills repo at `~/projects/my-skills`."
+```text
+$skills-sync Create repo at ~/projects/skills.
+$skills-sync Install only skills-sync.
+$skills-sync Use existing repo at ~/projects/skills.
+$shadcn-mcp Set up the shadcn MCP server.
+$git-commit Commit and push.
+```
+
+> [!TIP]
+> Prefix prompts with `$skill-name` to force a specific Codex CLI skill.
 
 ## Available skills
 
 | Skill | Description |
 | --- | --- |
 | `skills-sync` | Bootstrap or maintain a skills repo with autosync hooks for `~/.codex/skills`. |
-| `shadcn-mcp` | Install and configure the shadcn MCP server for Codex. |
+| `shadcn-mcp` | Install and configure the shadcn MCP server for Codex CLI. |
+| `git-commit` | Standardize commit messages and guide clean-history amendments when requested. |
