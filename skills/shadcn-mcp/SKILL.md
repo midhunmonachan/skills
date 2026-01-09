@@ -41,7 +41,13 @@ If you must use a full path to `npx`, update `command` accordingly.
 
 Restart Codex. On startup, confirm the `shadcn` MCP server initializes successfully (no MCP startup errors).
 
+Verification ideas:
+- Look for MCP startup logs in `~/.codex/log/`.
+- Confirm Codex can list or fetch shadcn components (no MCP tool errors).
+
 ### 5. Troubleshoot common issues
 
 - If the MCP server fails to start, check that `npx` is available in the Codex environment.
 - If the config already contains a `mcp_servers` block, merge the `shadcn` entry without overwriting other servers.
+- If `npx` works in your shell but not in Codex, use the full path to `npx` in `command`.
+- If the MCP server errors on fetch, confirm the network is available and rerun `npx shadcn@latest mcp`.
