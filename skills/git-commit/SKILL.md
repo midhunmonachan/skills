@@ -32,6 +32,13 @@ fix(ui): hide stop button when idle
 docs: document skills sync usage
 ```
 
+## Repo state checks
+
+- If the current directory is not a git repo, ask whether to run `git init`.
+- If the repo has no commits (`git rev-parse --verify HEAD` fails), treat it as the first commit:
+  - Use a meaningful message that reflects the primary feature delivered.
+  - Avoid "initial commit" unless the user asks for it.
+
 ## Clean history workflow
 
 Only amend a previous commit **when the user explicitly asks for a clean history** and the change is a small fix to the most recent commit.
